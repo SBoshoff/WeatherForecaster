@@ -1,0 +1,23 @@
+table {
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid black;
+}
+
+th {
+    background-color: gray;
+}
+
+#list:nth-child(odd){
+    background-color: #E0E0E0;
+}
+
+section div {
+    display: inline;
+}
+
+.imgCell {
+    text-align: center;
+}

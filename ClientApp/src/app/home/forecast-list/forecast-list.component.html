@@ -1,0 +1,16 @@
+<table *ngIf="forecastList">
+    <tr>
+        <th>Date</th>
+        <th>State</th>
+        <th></th>
+    </tr>
+    <tr id="list" *ngFor="let item of forecastList.consolidated_weather">
+        <td>{{item.applicable_date}}</td>
+        <td>{{item.weather_state_name}}</td>
+        <td class="imgCell"><img
+            src="https://www.metaweather.com/static/img/weather/png/{{item.weather_state_abbr}}.png"
+            width="40px"
+            height="40px">
+        </td>
+    </tr>
+</table>
