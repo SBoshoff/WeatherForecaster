@@ -11,7 +11,7 @@ import { ApiAuthorizationModule } from 'src/api-authorization/api-authorization.
 import { AuthorizeGuard } from 'src/api-authorization/authorize.guard';
 import { AuthorizeInterceptor } from 'src/api-authorization/authorize.interceptor';
 import { ForecastListComponent } from './home/forecast-list/forecast-list.component';
-import { ForecastItemComponent } from './home/forecast-list/forecast-item/forecast-item.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -20,16 +20,15 @@ import { ForecastItemComponent } from './home/forecast-list/forecast-item/foreca
     NavMenuComponent,
     HomeComponent,
     ForecastListComponent,
-    ForecastItemComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
     ApiAuthorizationModule,
+    FontAwesomeModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      // { path: 'counter', component: CounterComponent },
     ])
   ],
   providers: [
